@@ -1,10 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { useEffect, useState } from "react";
-import { useNavigation, useRouter } from "expo-router";
+import { Href, useNavigation, useRouter } from "expo-router";
 import { CategoryCard } from "@/components/Home";
 
 const Home = () => {
-  const [category, setcategory] = useState("");
+  const [category, setcategory] = useState("riddle");
   const navigation = useNavigation();
   const route = useRouter();
   useEffect(() => {
@@ -15,7 +15,7 @@ const Home = () => {
 
   const startCategory = () => {
     if (!category) return alert("Select category!!");
-    const path = category;
+    const path = category as Href<string>;
     route.push(path);
   };
 
