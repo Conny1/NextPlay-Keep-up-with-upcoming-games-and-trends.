@@ -1,9 +1,10 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Link } from "expo-router";
 
 const GameCard = () => {
   return (
-    <View style={styles.mainContainer}>
+    <Link href={"/game/23"} style={styles.mainContainer}>
       <Image
         source={{
           uri: "https://img.freepik.com/free-photo/close-up-studio-photo-elite-unit-special-forces-soldier-camouflage-uniform-holding-assault-rifle-with-laser-sight-aims-target_613910-20395.jpg?t=st=1732735261~exp=1732738861~hmac=6b6f81a6f83bb5e03d85bd31599312957fd3fb2b56188433fa40d20bc89d08c0&w=1380",
@@ -17,7 +18,7 @@ const GameCard = () => {
         <Text>PC, PS5</Text>
         <Text>4.9</Text>
       </View>
-    </View>
+    </Link>
   );
 };
 
